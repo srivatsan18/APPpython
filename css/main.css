@@ -1,0 +1,34 @@
+.bid
+{
+    background-color: black;
+    color:white;
+
+}
+.header
+{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    border: 10 px,10px,10px,10px solid rgb(255, 255, 255);
+}
+#st
+{
+    text-underline-position: below;
+    color: gold;
+}
+body
+{
+    margin:10px;
+}
+.paradigms
+{
+    margin: 15px;
+}
+.links
+{
+    color:#8bc34a;
+}
+#texti
+{
+    text-align: center;
+}
