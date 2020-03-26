@@ -9,7 +9,9 @@
     display: flex;
     text-align: center;
     justify-content: center;
-    border: 10 px,10px,10px,10px solid rgb(255, 255, 255);
+}
+.by{
+        text-align:right;
 }
 #st
 {
