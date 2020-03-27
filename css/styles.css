@@ -17,10 +17,19 @@
 {
     text-underline-position: below;
     color: gold;
+    border:3px solid gold;
+    width: 100%;
 }
 body
 {
     margin:10px;
+}
+#video
+{
+    border:3px solid wheat; 
+    margin: 40px;
+    width: 560px;
+    align-content: center;
 }
 .paradigms
 {

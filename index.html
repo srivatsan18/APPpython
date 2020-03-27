@@ -17,10 +17,10 @@
          <ol>
         <li><a class="links" href=#structure>Structural</a></li>
         <li><a class="links" href=#pro>Procedural</a></li>
-        <li>Object Oriented</li>
-        <li>Event Driven</li>
-        <li>Declarative</li>
-        <li>Imperative</li>
+        <li><a class="links" href=#oops>Object Oriented</a></li>
+        <li><a class="links" href="#event">Event Driven</a></li>
+        <li><a class="links" href="#dec">Declarative</a></li>
+        <li><a class="links" href=#imp>Imperative</a></li>
         <li> Parallel </li>
         <li>Concurrent</li>
         <li>Functional</li>
@@ -62,9 +62,107 @@
 <br>    print(n)
 <br>    n = n * n
 </div>
+<div id=video><iframe width="560" height="315" src="https://www.youtube.com/embed/TmtyFcLWXwo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
 <div id=pro><h3 id=st>Procedural Paradigm</h3></div>
 Tasks are treated as step-by-step iterations where common tasks are placed in functions that are called as needed.This coding style favors iteration, sequencing, selection, and modularization.Python excels in implementing this particular paradigm.
 <br>The procedural style relies on procedure calls to create modularized code. This approach simplifies your application code by breaking it into small pieces that a developer can view easily. Even though procedural coding is an older form of application development, it’s still a viable approach for tasks that lend themselves to step-by-step execution. Here’s an example of the procedural coding style using <b>my_list:</b><br>
-<img src="exampleprocedural.jpg" alt="Procedural Paradigm Example">
-    </body>
+<img src="exampleprocedural.jpg" alt="Procedural Paradigm Example"><br>
+<div id=video><iframe width="560" height="315" src="https://www.youtube.com/embed/CXOGzDKMu-k" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+<div id=oops><h3 id=st>Object Oriented Paradigm</h3></div>
+Object-oriented Programming, or OOP for short, is a programming paradigm which provides a means of structuring programs so that properties and behaviors are bundled into individual objects.
+For instance, an object could represent a person with a name property, age, address, etc., with behaviors like walking, talking, breathing, and running. Or an email with properties like recipient list, subject, body, etc., and behaviors like adding attachments and sending.
+<br>class Dog(object):<br>
+&emsp;&emsp; pass
+<br><ul class="points">
+    <li>Object</li>
+    <li>Class</li>
+    <li>Method</li>
+    <li>Inheritance</li>
+    <li>Polymorphism</li>
+    <li>Data Abstraction</li>
+    <li>Encapsulation</li>
+    </ul>
+All classes create objects, and all objects contain characteristics called attributes (referred to as properties in the opening paragraph). Use the __init__() method to initialize (e.g., specify) an object’s initial attributes by giving them their default value (or state). This method must have at least one argument as well as the self variable, which refers to the object itself (e.g., Dog).
+class Dog:<br>
+
+<br>    # Initializer / Instance Attributes
+<br> &emsp;   def __init__(self, name, age):
+<br>    &emsp;&emsp;    self.name = name
+<br>    &emsp;&emsp;    self.age = age
+<br>
+<div id=video><iframe width="560" height="315" src="https://www.youtube.com/embed/gZwPdqC2Os0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+<div id=event><h3 id=st>Event Driven Paradigm</h3></div>
+Event-driven programming focuses on events. Eventually, the flow of program depends upon events. Until now, we were dealing with either sequential or parallel execution model but the model having the concept of event-driven programming is called asynchronous model. Event-driven programming depends upon an event loop that is always listening for the new incoming events. The working of event-driven programming is dependent upon events. Once an event loops, then events decide what to execute and in what order
+.<br>Tkinter is the standard GUI library for Python.
+
+<br>Creating a GUI application using Tkinter
+
+<br>Steps
+
+<br>Import the Tkinter module.
+
+<br>Import tKinter as tk
+
+<br>Create the GUI application main window.
+
+<br>root = tk.Tk()
+
+<br>Add one or more of the above-mentioned widgets to the GUI application.
+
+<br>button = tk.Button(root, text='Stop', width=25, command=root.destroy)
+
+<br>button.pack()
+
+<br>Enter the main event loop to take action against each event triggered by the user.
+
+<br>root.mainloop()
+<div id=video><iframe width="560" height="315" src="https://www.youtube.com/embed/trqSqTu8YgQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>    
+<div id=dec><h3 id=st>Declarative Paradigm</h3></div>
+Declarative
+programming
+is
+a
+programming paradigm that expresses the
+logic of
+a computation without
+describing its
+control flow.
+This
+paradigm
+often
+considers
+programs
+as
+theories of
+a formal
+logic,
+and computations
+as deductions
+in
+that logic space.
+
+Declarative
+programming
+is
+often
+defined
+as any style of programming
+that
+is not
+imperative.
+
+Common declarative
+languages
+include
+those of database query
+languages (SQL), logic
+programming,
+functional programming, etc.
+<img src="sqldec.jpg" alt="Declarative Paradigm Example">
+<div id=video><iframe width="560" height="315" src="https://www.youtube.com/embed/6RAQynw2Sy8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+<div id=imp><h3 id=st>Imperative Paradigm</h3></div>
+The imperative programming paradigm uses the imperative mood of natural language to express directions. It executes commands in a step-by-step manner, just like a series of verbal commands. Following the "how-to-solve" approach, it makes direct changes to the state of the program; hence it is also called the stateful programming model. Using the imperative programming paradigm, you can quickly write very simple yet elegant code, and it is super-handy for tasks that involve data manipulation. Owing to its comparatively slower and sequential execution strategy, it cannot be used for complex or parallel computations.
+<img src="impexample.jpg" alt="imperative example">
+<div id=video><iframe width="560" height="315" src="https://www.youtube.com/embed/KWD8F2YcYwE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+</body>
 </html>
