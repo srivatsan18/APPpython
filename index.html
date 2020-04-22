@@ -21,15 +21,15 @@
         <li><a class="links" href="#event">Event Driven</a></li>
         <li><a class="links" href="#dec">Declarative</a></li>
         <li><a class="links" href=#imp>Imperative</a></li>
-        <li> Parallel </li>
-        <li>Concurrent</li>
-        <li>Functional</li>
-        <li> Logic</li>
-        <li> Dependent</li>
-        <li> Network</li>
-        <li>Symbolic</li> 
-        <li>Automata</li>
-        <li>GUI</li>
+        <li><a class="links" href="#parallel">Parallel</a></li>
+        <li><a class="links" href="#con">Concurrent</a></li>
+        <li><a class="links" href="#fun">Functional</a></li>
+        <li><a class="links" href="#log">Logic</a></li>
+        <li><a class="links" href="#dep" >Dependent</a></li>
+        <li><a class="links" href="#net">Network</a></li>
+        <li><a class="links" href="#sym">Symbolic</a></li> 
+        <li><a class="links" href="#aut">Automata</a></li>
+        <li><a class="links" href="#gui">GUI</a></li>
          </ol>   
         </div>
     <div id=structure><h3 id=st>Structural Paradigm</h3>
@@ -164,5 +164,199 @@ functional programming, etc.
 The imperative programming paradigm uses the imperative mood of natural language to express directions. It executes commands in a step-by-step manner, just like a series of verbal commands. Following the "how-to-solve" approach, it makes direct changes to the state of the program; hence it is also called the stateful programming model. Using the imperative programming paradigm, you can quickly write very simple yet elegant code, and it is super-handy for tasks that involve data manipulation. Owing to its comparatively slower and sequential execution strategy, it cannot be used for complex or parallel computations.
 <img src="impexample.jpg" alt="imperative example">
 <div id=video><iframe width="560" height="315" src="https://www.youtube.com/embed/KWD8F2YcYwE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+
+<div id="parallel"><h3 id="st">Parallel Paradigm</h3>
+    A system is said to be parallel if it can support two or more actions executing simultaneously i.e., multiple actions are 
+    simultaneously executed in parallel systems.
+    <ul>
+    <li> The evolution of parallel processing, even if slow, gave rise to a considerable variety of programming paradigms.</li>
+    <br> Parallelism Types:
+    <li> Explicit Parallelism</li>
+    <li> Implicit Parallelism</li>
+    </ul>
+    <h4>Explicit Parallelism</h4>
+<br>Explicit Parallelism is characterized by the presence of explicit constructs in the programming language, aimed at describing (to 
+a certain degree of detail) the way in which the parallel computation will take place. 
+ A wide range of solutions exists within this framework. One extreme is represented by the ``ancient'' use of basic, low level 
+mechanisms to deal with parallelism--like fork/join primitives, semaphores, etc--eventually added to existing programming 
+languages. Although this allows the highest degree of flexibility (any form of parallel control can be implemented in terms of 
+the basic low level primitives gif), it leaves the additional layer of complexity completely on the shoulders of the programmer, 
+making his task extremely complicate.
+<h4>Implicit Parallelism</h4>
+<br>
+Allows programmers to write their programs without any concern about the exploitation of parallelism. Exploitation of 
+parallelism is instead automatically performed by the compiler and/or the runtime system. In this way the parallelism is 
+transparent to the programmer maintaining the complexity of software development at the same level of standard sequential 
+programming.<br>
+• Extracting parallelism implicitly is not an easy task. For imperative programming languages, the complexity of the problem is 
+almost prohibitively and allows positive results only for restricted sets of applications (e.g., applications which perform 
+intensive operations on arrays.<br>
+• Declarative Programming languages, and in particular Functional and Logic languages, are characterized by a very high level of 
+abstraction, allowing the programmer to focus on what the problem is and leaving implicit many details of how the problem 
+should be solved. <br>
+• Declarative languages have opened new doors to automatic exploitation of parallelism. Their focusing on a high level 
+description of the problem and their mathematical nature turned into positive properties for implicit exploitation of 
+parallelism.<br>
+<h4>Methods for parallelism</h4>
+There are many methods of programming parallel computers. Two of the most common are message passing and data parallel. <br>
+1. Message Passing - the user makes calls to libraries to explicitly share information between processors.<br> 
+2. Data Parallel - data partitioning determines parallelism <br>
+3. Shared Memory - multiple processes sharing common memory space<br> 
+4. Remote Memory Operation - set of processes in which a process can access the memory of another process without its 
+participation <br>
+5. Threads - a single process having multiple (concurrent) execution paths<br> 
+6. Combined Models - composed of two or more of the above.<br>
+<img src="parallel.jpg" height="300px">
+<div id="video"><iframe width="560" height="315" src="https://www.youtube.com/embed/xs727GE6AM4?start=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+<div id="con"><h3 id="st">Concurrent Programming Paradigm</h3></div>
+Computing systems model the world, and the world contains actors that execute independently of, but communicate with, 
+each other. In modelling the world, many (possibly) parallel executions have to be composed and coordinated, and that's 
+where the study of concurrency comes in.<br>
+• There are two common models for concurrent programming: shared memory and message passing.<br>
+• Shared memory. In the shared memory model of concurrency, concurrent modules interact by reading and writing 
+shared objects in memory. <br>
+• Message passing. In the message-passing model, concurrent modules interact by sending messages to each other 
+through a communication channel. Modules send off messages, and incoming messages to each module are queued up 
+for handling.<br>
+<h4>Issues Concurrent Programming Paradigm</h4>
+Concurrent programming is programming with multiple tasks. The major issues of concurrent programming are:
+• Sharing computational resources between the tasks;<br>
+• Interaction of the tasks.<br>
+Objects shared by multiple tasks have to be safe for concurrent access. Such objects are called protected. Tasks accessing such an 
+object interact with each other indirectly through the object.<br>
+An access to the protected object can be:<br>
+• Lock-free, when the task accessing the object is not blocked for a considerable time;
+• Blocking, otherwise.<br>
+Blocking objects can be used for task synchronization. To the examples of such objects belong:
+• Events;<br>
+• Mutexes and semaphores;<br>
+• Waitable timers;<br>
+• Queues<br>
+<img src="concurrent.jpg">
+<div id="video"><iframe width="560" height="315" src="https://www.youtube.com/embed/y85G7GLYhYA?start=4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+<div id="fun"><h3 id="st">Functional Paradigm</h3></div>
+Functional programming is a programming paradigm in which we try to bind everything in pure mathematical functions style. It is a declarative type of programming style. Its main focus is on “what to solve” in contrast to an imperative style where the main focus is “how to solve”. It uses expressions instead of statements. An expression is evaluated to produce a value whereas a statement is executed to assign variables.
+Functional Languages
+
+Functional languages are created based on the functional paradigm. Such languages permit functional solutions to problems by permitting a programmer to treat functions as first-class objects(they can be treated as data, assumed to have the value of what they return; therefore, they can be passed to other functions as arguments or returned from functions).
+
+Often functional programs are:
+Easier to read.
+Easier to debug and maintain.
+Easier to parallelize.
+Useful features:
+Hindley–Milner type system.
+Lazy evaluation.
+Closures.
+All computations are implemented through functions: functions are first-class citizens.
+Main building blocks:
+Immutability: no variables gets changed (no side effects). In some sense, there are no variables.
+Recursions.
+Curried functions.
+Higher-order functions: compositions ('operators in functional analysis).
+
+<h4>Advantages:</h4><br>
+The following are desirable properties of a functional language:<br>
+The high level of abstraction, especially when functions are used, supresses many of the details of programming and thus removes the possibility of commiting many classes of errors;<br>
+The lack of dependence on assignment operations, allowing programs to be evaluated in many different orders. This evaluation order independence makes function-oriented languages good candidates for programming massively parallel computers;<br>
+The absence of assignment operations makes the function-oriented programs much more amenable to mathematical proof and analysis than are imperative programs, because functional programs possess referential transparency.<br>
+<h4>Disadvantages:</h4>
+Perhaps less efficiencey<br>
+Problems involving many variables or a lot of sequential activity are sometimes easier to handle imperatively or with object-oriented programming.<br>
+<img src="functional.jpg" height="400px">
+<div id="video"><iframe width="560" height="315" src="https://www.youtube.com/embed/goypZR_lQ7I" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+<div id=="log"><h3 id="st">Logic Paradigm</h3></div>
+It can be an abstract model of computation.<br>
+• Solve logical problems like puzzles, series<br>
+• Have knowledge base which we know before and along with the question you specify knowledge and how that knowledge is to be applied 
+through a series of rules<br>
+• The Logical Paradigm takes a declarative approach to problem-solving.<br> 
+• Various logical assertions about a situation are made, establishing all known facts.<br> 
+• Then queries are made.<br>
+Logic programming is a paradigm where computation arises from proof search in a logic according to a fixed, predictable strategy. A logic is a 
+language. It has syntax and semantics. It. More than a language, it has inference rules.<br>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/odgpKmVD-pQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div id="#dep"><h3 id="st">Dependent Paradigm</h3></div>
+A constant problem: <br>
+• Writing a correct computer program is hard and proving that a program is correct is even harder<br> 
+• Dependent Types allow us to write programs and know they are correct before running them.<br>
+• dependent types: you can specify types that can check the value of your variables at compile time<br>
+Example:
+Here is how you can declare a Vector that contains the values 1, 2, 3 :<br>
+val l1 = 1 :#: 2 :#: 3 :#: Vnil<br>
+This creates a variable l1 who’s type signature specifies not only that it’s a Vector that contains Ints, but also that it is a Vector of 
+length 3. The compiler can use this information to catch errors. Let’s use the vAdd method in Vector to perform a pairwise addition 
+between two Vectors:<br>
+val l1 = 1 :#: 2 :#: 3 :#: VNil <br>
+val l2 = 1 :#: 2 :#: 3 :#: VNil <br>
+ val l3 = l1 vAdd l2<br>
+ // Result: l3 = 2 :#: 4 :#: 6 :#: VNil  <br> 
+ <div id="net"><h3 id="st">Networking Paradigm</h3></div>
+ The Network paradigm involves thinking of computing in terms of a client, who is essentially in need of some type of information, 
+ and a server, who has lots of information and is just waiting to hand it out. Typically, a client will connect to a server and query for 
+ certain information. The server will go off and find the information and then return it to the client.
+ In the context of the Internet, clients are typically run on desktop or laptop computers attached to the Internet looking for 
+ information, whereas servers are typically run on larger computers with certain types of information available for the clients to 
+ retrieve. The Web itself is made up of a bunch of computers that act as Web servers; they have vast amounts of HTML pages and 
+ related data available for people to retrieve and browse. Web clients are used by those of us who connect to the Web servers and 
+ browse through the Web pages.
+ Network programming uses a particular type of network communication known as sockets. A socket is a software abstraction for an 
+ input or output medium of communication.
+ <h4>What is Socket?</h4>
+ A socket is a software abstraction for an input or output medium of communication.<br> 
+• Sockets allow communication between processes that lie on the same machine, or on different machines working in diverse 
+environment and even across different continents.<br>
+• A socket is the most vital and fundamental entity. Sockets are the end-point of a two-way communication link.<br> 
+• An endpoint is a combination of IP address and the port number. <br>
+For Client-Server communication,<br>
+<br>▪ Sockets are to be configured at the two ends to initiate a connection, 
+▪ Listen for incoming messages<br>
+▪ Send the responses at both ends<br>
+▪ Establishing a bidirectional communication.<br> 
+<img src="network.jpg" height="300px">
+<img src="network2.jpg" height="300px">
+<div id="video"><iframe width="560" height="315" src="https://www.youtube.com/embed/T0rYSFPAR0A" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+<div id="sym"><h3 id="st">Symbolic Program Paradigm</h3></div>
+Symbolic computation deals with the computation of mathematical objects symbolically. This means that the mathematical objects 
+are represented exactly, not approximately, and mathematical expressions with unevaluated variables are left in symbolic form.<br>
+It Covers the following:<br>
+• As A calculator and symbols<br>
+• Algebraic Manipulations - Expand and Simplify<br>
+• Calculus – Limits, Differentiation, Series , Integration<br>
+• Equation Solving – Matrices<br>
+<img src="symbolic.jpg">
+<div id="video"><iframe width="560" height="315" src="https://www.youtube.com/embed/QlRB2k9i4gc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+<div id="aut"><h3>Automata Based Paradigm</h3></div>
+Automata-based programming is a programming paradigm in which the program or its part is thought of as a model of a finite state 
+machine or any other formal automation.
+<h4>What is Automata Theory?</h4><br>
+• Automata theory is the study of abstract computational devices<br>
+• Abstract devices are (simplified) models of real computations <br>
+• Computations happen everywhere: On your laptop, on your cell phone, in nature, …<br><br>
+The language of a DFA (Q, Σ, δ, q0
+, F) is the set of all strings over Σ that, starting from 
+q0<br>
+ and following the transitions as the string is read left to right, will reach some 
+accepting state.
+<div id="video"><iframe width="560" height="315" src="https://www.youtube.com/embed/68KdsVxKCOk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+<div id="gui"><h3 id="st">GUI</h3></div>
+In the 1980's, individuals started using computers. Typical applications included spreadsheets, word processors and computer aided design (CAD). Many of the people using these applications had no technical background. One consequence of this was that user interface design became important. It was no longer sufficient that a program work; in addition, it had to make its functionality accessible to users who did not have specialized training.
+Many different user interfaces have been tried. One of the most successful is the graphical user interface (GUI). This is the kind of interface provided by the Macintosh, Motif, Tk, and Microsoft Windows. It includes a mouse and a graphical display, with windows, menus, dialog boxes, scroll bars and so on.
+<br>Some important points:
+A major task that a GUI designer needs to do is to determine what will happen when a GUI is invoked
+Every GUI component may generate different kinds of “events” when a user makes access to it using his mouse or keyboard
+<br>E.g. if a user moves his mouse on top of a button, an event of that button will be generated to the Windows system
+<br>E.g. if the user further clicks, then another event of that button will be generated (actually it is the click event)
+For any event generated, the system will first check if there is an event handler, which defines the action for that event
+<br>GUI Using Python
+<br>Tkinter: Tkinter is the Python interface to the Tk GUI toolkit shipped with Python.
+<br>wxPython: This is an open-source Python interface for wxWindows
+<br>PyQt −This is also a Python interface for a popular cross-platform Qt GUI library.
+<br>JPython: JPython is a Python port for Java which gives Python scripts seamless access to Java class libraries on the local machine
+<br>Tkinter Programming
+Tkinter is the standard GUI library for Python.
+Creating a GUI application using Tkinter
+<img src="gui.jpg">
+<div id="video"><iframe width="560" height="315" src="https://www.youtube.com/embed/VMP1oQOxfM0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
 </body>
 </html>

@@ -39,6 +39,12 @@ body
 {
     color:#8bc34a;
 }
+.links:hover
+{
+    color: blue;
+    border: 3px solid red;
+}
+
 #texti
 {
     text-align: center;
